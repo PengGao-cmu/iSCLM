@@ -1,0 +1,2 @@
+modelname,RadiologyT,RadiologyTL,Pathology,SCLM-a,SCLM-b,SCLM-c,SCLM-d,SCLM-e,SCLM-f,Pathology-a,Pathology-b,Pathology-c,Concatenate,iRadiologyTL,iPathology,iSCLM,iRPM
+NA,0.609,0.733,0.515,0.088,0.049,0.244,0.229,0.53,0.534,0.472,0.447,0.445,0.309,0.823,0.519,0.186,0.632
