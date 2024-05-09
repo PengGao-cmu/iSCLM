@@ -64,9 +64,9 @@ def group_and_average_to_excel(output_folder, num_iterations):
 
 
 # Set file path
-file_path = r"C:\Users\32618\Desktop\论文校对\交付\distance(table S5)\distance data\iPM Stroma.xlsx"#data from distance data
+file_path = r"C:\Users\32618\Desktop\distance(table S5)\distance data\iPM Stroma.xlsx"#data from distance data
 sheet_name = "Sheet1"
-output_folder = r"C:\Users\32618\Desktop\论文校对\交付\distance(table S5)\Top patch average distance"
+output_folder = r"C:\Users\32618\Desktop\distance(table S5)\Top patch average distance"
 num_iterations = 10
 importance_group = [
     "model ranking"
