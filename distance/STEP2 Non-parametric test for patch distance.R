@@ -1,6 +1,6 @@
 library(xlsx)
 # Set folder for storing top patch distance mean data 
-folder_path <- "C:/Users/32618/Desktop/论文校对/交付/distance(table S5)/Top patch average distance"
+folder_path <- "C:/Users/32618/Desktop/distance(table S5)/Top patch average distance"
 xlsx_files <- list.files(folder_path, pattern = "\\.xlsx$", full.names = TRUE)
 result_list <- list()
 
@@ -31,5 +31,5 @@ for (xlsx_file in xlsx_files) {
 }
 # Merge calculation results
 final_result <- do.call(rbind, result_list)
-output_path <- "C:/Users/32618/Desktop/论文校对/交付/distance(table S5)/result.xlsx"
+output_path <- "C:/Users/32618/Desktop/distance(table S5)/result.xlsx"
 write.xlsx(final_result, file = output_path, row.names = T ,col.names = F)
