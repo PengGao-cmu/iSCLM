@@ -7,9 +7,9 @@ library(stringr)
 library(broom)
 importance <- c(paste0("model ranking")) 
 topnum<-c(11)#topnum can be set to output inspection results within different ranges.
-data <- read_excel("C:/Users/32618/Desktop/论文校对/交付/cell/cell data/iSCLM.xlsx", sheet = 1, col_types = c("text", "text", "numeric", "numeric", "numeric", "text", "text", "text", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric"))
+data <- read_excel("C:/Users/32618/Desktop/cell/cell data/iSCLM.xlsx", sheet = 1, col_types = c("text", "text", "numeric", "numeric", "numeric", "text", "text", "text", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric"))
 #data1 Using the provided label list address.
-data1 <- read_excel("C:/Users/32618/Desktop/论文校对/交付/cell/cell data/label list.xlsx", sheet = 1, col_types = c("numeric", "text"))
+data1 <- read_excel("C:/Users/32618/Desktop/cell/cell data/label list.xlsx", sheet = 1, col_types = c("numeric", "text"))
 for (importancename in importance) {
   
   data2 <- filter(data, get(importancename)<topnum) 
@@ -123,12 +123,12 @@ for (importancename in importance) {
     )
 
   # Save the raw data
-  write_xlsx(summary_table_top10, paste0("C:/Users/32618/Desktop/论文校对/交付/cell/cell sort/Patient unit cell top ", topnum - 1, "_", importancename, " data.xlsx"))
-  write_xlsx(summary_table, paste0("C:/Users/32618/Desktop/论文校对/交付/cell/cell sort/Patient unit cell whoel ROI ", importancename, " data.xlsx"))
+  write_xlsx(summary_table_top10, paste0("C:/Users/32618/Desktop/cell/cell sort/Patient unit cell top ", topnum - 1, "_", importancename, " data.xlsx"))
+  write_xlsx(summary_table, paste0("C:/Users/32618/Desktop/cell/cell sort/Patient unit cell whoel ROI ", importancename, " data.xlsx"))
 
   # Independent samples t-test.
-  data3 <- read_excel(paste0("C:/Users/32618/Desktop/论文校对/交付/cell/cell sort/Patient unit cell top ", topnum - 1, "_", importancename, " data.xlsx"))
-  data4 <- read_excel(paste0("C:/Users/32618/Desktop/论文校对/交付/cell/cell sort/Patient unit cell whoel ROI ", importancename, " data.xlsx"))
+  data3 <- read_excel(paste0("C:/Users/32618/Desktop/cell/cell sort/Patient unit cell top ", topnum - 1, "_", importancename, " data.xlsx"))
+  data4 <- read_excel(paste0("C:/Users/32618/Desktop/cell/cell sort/Patient unit cell whoel ROI ", importancename, " data.xlsx"))
   data3 <- data3 %>% filter(`Label` %in% c("0", "1"))
   data4 <- data4 %>% filter(`Label` %in% c("0", "1"))
   columns <- c("proportion_no.neo","proportion_neopla","proportion_nolabe", "proportion_connec", "proportion_inflam", "proportion_necros","ratio_no.neo", "ratio_nolabe", "ratio_connec", "ratio_inflam", "ratio_necros")
@@ -150,6 +150,6 @@ for (importancename in importance) {
   results_df1 <- bind_rows(results1, .id = "variable")
   results_df2 <- bind_rows(results2, .id = "variable")
   # Save the t-test results
-  write_xlsx(results_df1, paste0("C:/Users/32618/Desktop/论文校对/交付/cell/result/Patient unit cell top ", topnum - 1, "_", importancename, " t-test.xlsx"))
-  write_xlsx(results_df2, paste0("C:/Users/32618/Desktop/论文校对/交付/cell/result/Patient unit cell whoel ROI ", importancename, " t-test.xlsx"))
+  write_xlsx(results_df1, paste0("C:/Users/32618/Desktop/cell/result/Patient unit cell top ", topnum - 1, "_", importancename, " t-test.xlsx"))
+  write_xlsx(results_df2, paste0("C:/Users/32618/Desktop/cell/result/Patient unit cell whoel ROI ", importancename, " t-test.xlsx"))
 }
