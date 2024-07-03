@@ -14,9 +14,9 @@ The demo file is used to calculate model data, such as AUC and ACC, using the `c
 
 ## Code
 The provided codes are involved in model prediction and the validation process for Fig 1, Supplementary Table 5, and Supplementary Table 6.
-
-### Predict
-The `Predict` folder contains CT model prediction code and pathology model prediction code, which can be used separately to output prediction values.
+M
+### Model prediction
+The `Model prediction` folder contains CT model prediction code and pathology model prediction code, which can be used separately to output prediction values.
 
 ### Fig. 5
 The `SHAP.py` file implements the visualization of sample SHAP values and outputs the SHAP value matrix. To achieve this, we have modified functions within the shap package, and it is necessary to replace the `_colors.py` and `_image.py` files in the corresponding locations within the shap package.
