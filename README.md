@@ -9,14 +9,14 @@ conda env create -n iSCLM_demo --file env.yml
 conda activate iSCLM_demo
 ```
 
-## Demo
-The demo file is used to calculate model data, such as AUC and ACC, using the `countAUC.R` and `countACC.R` files, respectively.
+## Performance computation
+Files within `Performance computation` folder are used to calculate model data, such as AUC and ACC, using the `countAUC.R` and `countACC.R` files, respectively.
 
 ## Code
 The provided codes are involved in model prediction and the validation process for Fig 1, Supplementary Table 4, and Supplementary Table 5.
 
 ### Model prediction
-The `Model prediction` folder contains CT model prediction codes and pathology model prediction codes, which can be used separately to output prediction values.
+The `predict` folder contains CT model prediction codes and pathology model prediction codes, which can be used separately to output prediction values.
 
 ### Fig. 5
 The `SHAP.py` file implements the visualization of sample SHAP values and outputs the SHAP value matrix. To achieve this, we have modified functions within the shap package, and it is necessary to replace the `_colors.py` and `_image.py` files in the corresponding locations within the shap package.
