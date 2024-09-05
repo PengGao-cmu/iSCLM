@@ -1,7 +1,7 @@
 # Interpretable Multi-Modal Artificial Intelligence Model for Predicting Locally Advanced Gastric Cancer Response to Neoadjuvant Chemotherapy
 
 ## Requirement
-These codes can run  on Windows 11 with Python 3.9.7,R-4.3.2 and CUDA (GPU computation).
+These codes can run  on Windows 11 with Python 3.7,R-4.3.1 and CUDA (GPU computation).
 
 ### Create a Python code dependency environment by performing the following steps.
 ```bash
@@ -21,8 +21,8 @@ The `Model prediction` folder contains CT model prediction codes and pathology m
 ### Fig. 5
 The `SHAP.py` file implements the visualization of sample SHAP values and outputs the SHAP value matrix. To achieve this, we have modified functions within the shap package, and it is necessary to replace the `_colors.py` and `_image.py` files in the corresponding locations within the shap package.
 
-### Supplementary Table 5
+### Supplementary Table 4
 Use the `STEP1.py` file to process and calculate the patch distance values, and then use the `STEP2.R` file to verify the distance values.
 
-### Supplementary Table 6
-Use the `Supplementary Table 6.R` file to process and calculate the cell data, output the file, and perform further verification.
+### Supplementary Table 5
+Use the `Supplementary Table 5.R` file to process and calculate the cell data, output the file, and perform further verification.
