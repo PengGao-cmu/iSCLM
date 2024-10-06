@@ -26,3 +26,6 @@ Use the `STEP1 Mean absolute deviation calculation.py` file to process and calcu
 
 ### Supplementary Table 5
 Use the `Cellular component t-test.R` file to process and calculate the cell data, output the file, and perform further verification.
+
+### Classifiers
+This section of the code configures 7 classifiers based on Random Trees in QuPath software to detect immunohistochemistry-positive cells automatically.
