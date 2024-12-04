@@ -43,7 +43,7 @@ from sklearn import metrics
 from pre_functions.utils_clpca import generate_dataset
 import torch
 np.random.seed(0)
-seed_value = 0  # set random
+seed_value = 260  # set random
 random.seed(seed_value)
 os.environ['PYTHONHASHSEED'] = str(seed_value)
 torch.manual_seed(seed_value)
