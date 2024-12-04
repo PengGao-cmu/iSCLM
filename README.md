@@ -1,7 +1,7 @@
 # Interpretable Multi-Modal Artificial Intelligence Model for Predicting Locally Advanced Gastric Cancer Response to Neoadjuvant Chemotherapy
 
 ## Requirement
-These codes can run on Windows 11 with Python 3.7,R-4.3.1 and CUDA (GPU computation).
+These codes can run on Windows 11 with Python 3.8,R-4.3.1 and CUDA (GPU computation).
 
 ### Create a Python code dependency environment by performing the following steps.
 ```bash
